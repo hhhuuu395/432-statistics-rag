@@ -1,0 +1,218 @@
+[
+  {
+    "问题": "这个题可以用洛必达做吗？",
+    "答案": "没说导函数连续，你洛必达后也代入不了，这个要用导数定义吧。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260507_201610_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "我这个⑤错哪了？",
+    "答案": "你这个没错吧；这种不定积分答案不唯一。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260503_191828_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "请问这样写对吗（附手写推导图片）",
+    "答案": "可以的",
+    "确认型": true,
+    "来源文件": "五月/Screenshot_20260507_214100_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "可以帮我简单讲下这个原理吗？有点转不过来",
+    "答案": "AX=B；X=A的逆乘B。然后把(A，B)变成(E，X)：左边的A要变成E相当于左乘了A的逆，那么对于B就变成了A的逆乘B，也就是X。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260507_214218_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "这道题说在x等于0处连续，应该求左右极限，为什么去求左右导数了？求这俩一样吗？",
+    "答案": "它问的是一阶导连续",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260514_173500_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "请问一下帕累托韦布儿这种分布需要记密度函数吗，做题的时候有的题干给了有的没给",
+    "答案": "考茆的学校我觉得还是记一下吧",
+    "确认型": true,
+    "来源文件": "五月/Screenshot_20260514_134209_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "第一问有什么好方法",
+    "答案": "只能硬算",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260503_192130_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "学生询问图片中关于 P(Y=Xn)=P(max(X1,...,Xn)=Xn)=... 的推导这一步是否正确。",
+    "答案": "这一步不对，只是 xi 之间独立；但要是 x1 < xn+1、x2 < xn+1…这些是不独立的。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260506_181142_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "我想问一下dx和△x有什么区别和联系啊 这两个什么时候可以直接等价，什么时候要做区分呢",
+    "答案": "△x是有限的；dx是微分，是无穷小。△x是减出来的，dx是极限概念。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260508_115929_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "不对，我这个公式好像列错了",
+    "答案": "不独立，你第三个的分母用了独立",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260514_173815_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "第三个怎么证明",
+    "答案": "就用定义先把偏导数求出来；然后你把f(x, y)求导算导函数在(0, 0)的极限看看和偏导数相不相等",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260514_204633_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "这个等式是怎么算出来的啊，我用洛必达和泰勒展开cos(sinx)这一项最后算出来怎么都是1/4",
+    "答案": "这个是和差化积公式（并给出和差化积、积化和差公式表：sinα+sinβ=2sin((α+β)/2)cos((α-β)/2)，sinα-sinβ=2cos((α+β)/2)sin((α-β)/2)，cosα+cosβ=2cos((α+β)/2)cos((α-β)/2)，cosα-cosβ=-2sin((α+β)/2)sin((α-β)/2)；cosαcosβ=1/2[cos(α+β)+cos(α-β)]，cosαsinβ=1/2[sin(α+β)+sin(α-β)]，sinαcosβ=1/2[sin(α+β)+sin(α-β)]，sinαsinβ=-1/2[cos(α+β)-cos(α-β)]）",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260515_211538_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "帮我看看这个错哪了呗",
+    "答案": "你这个里面根号2成外面π/2不是π吧",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260516_120243_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "判断极值点的题，Δ=AC−B²=0的时候，那个点咋看是不是极值点呀",
+    "答案": "找这个点邻域的点，用极值定义，看看是不是都大于它或都小于它",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260516_131800_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "这道题为什么不选C？",
+    "答案": "平均值一样，直接用标准差比较就行，不用再来算离散系数。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260516_155626_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "为啥这样想不对呀？",
+    "答案": "分母不对；不是一次取两个，是分两次取；分子也不对，应该是c10 1乘c11 2加c2 1乘c11 1；得按第一次是否取到次品分类。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260516_155555_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "这一步是为什么呀",
+    "答案": "1/n；这个无穷级数不是收敛的；所以是正无穷。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260518_100304_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "[学生]发手写推导图问：学长学姐，这样做错在哪里了呢？看讲解说的是x要小于-1。",
+    "答案": "x应该是-sec t；因为tan t大于0，t在第一象限，sec t也大于0；x是小于-1的曲线，应该带负号。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260518_100712_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "请问一下怎么在知道3的情况下推出来1 2同解啊",
+    "答案": "这个其实就是系数矩阵行向量组等价，就能说明 Ax=0 和 Bx=0 同解。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260518_155706_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "[学生1]：我觉得B也对，但答案是C",
+    "答案": "B也是对的",
+    "确认型": true,
+    "来源文件": "五月/Screenshot_20260518_134538_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "这里为啥不是kc",
+    "答案": "第k次取吧",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260518_165542_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "分子为啥是上一次的期望",
+    "答案": "就是经历了k-1次放",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260518_165542_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "学长这题怎么做（附题目截图）",
+    "答案": "可以把 1/2 移到左边，然后两边平方，再去配方，代入 x+1、x+1/2 这种，用周期的定义就能做出来了，你试试。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260519_130819_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "我想请教一下这个（附题目图片）",
+    "答案": "对的",
+    "确认型": true,
+    "来源文件": "五月/Screenshot_20260518_104128_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "我还是不会算这个微分",
+    "答案": "就两边求导",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260518_213554_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "这部分为啥得0啊",
+    "答案": "趋于无穷时 f(x) 为 0；趋于负无穷时分布函数为 0。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260518_141912_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "那这个怎么换元呢？",
+    "答案": "我觉得强算吧；这题就是考计算量。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260516_195738_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "这几个点是怎么选出来的呀",
+    "答案": "就是试出来的，多试几个",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260522_162639_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "这个为啥算出来是抽象函数？但是这个就是一个具体的数呢？",
+    "答案": "因为上面那个范围带了t；下面那个范围是带了R，是具体的数。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260519_221226_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "这题是不是直接用保号性结论判断就行啊",
+    "答案": "可以的",
+    "确认型": true,
+    "来源文件": "五月/Screenshot_20260519_162525_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "这个c选项为什么是错的呀",
+    "答案": "B有可能等于",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260519_162525_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "这个c选项为什么是错的呀",
+    "答案": "B有可能等于，你可以举个例子：(-1)的n+1次方/n；它不是加括号的，它中间是减号，和原级数不一样。",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260519_162722_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "这题是不是直接用保号性结论判断就行啊",
+    "答案": "可以的",
+    "确认型": true,
+    "来源文件": "五月/Screenshot_20260519_162722_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "还是不理解这个E(x)+2这儿，是为什么呢",
+    "答案": "摸到2就得两分，然后放回去重新摸球，相当于重新开始，就加E(x)",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260522_203953_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "这25题咋想的",
+    "答案": "[学长]：我们一般先试倒代换",
+    "确认型": false,
+    "来源文件": "五月/Screenshot_20260522_223837_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  },
+  {
+    "问题": "这样判断上面那个题趋向于零的情况对不对呀（附手写求极限题）",
+    "答案": "第二步不能洛必达",
+    "确认型": true,
+    "来源文件": "五月/Screenshot_20260522_172542_com_tencent_wework_ExternalGroupMessageListActivity.jpg"
+  }
+]
