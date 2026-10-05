@@ -1,0 +1,15 @@
+# secrets
+.env
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# trial / temp artifacts
+.tmp_trial/
+
+# raw source materials — 学生PII截图 + 教材PDF版权 + 大体积二进制
+# 清洗/脱敏后的评测数据放单独目录（如 data/）再入库
+materials/
