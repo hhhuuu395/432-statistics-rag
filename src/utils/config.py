@@ -15,7 +15,7 @@ for _k in ('HTTP_PROXY', 'HTTPS_PROXY', 'http_proxy', 'https_proxy', 'ALL_PROXY'
 ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / 'data'
 MATERIALS_DIR = ROOT / 'materials'
-INDEX_DIR = DATA_DIR / 'faiss_index'
+INDEX_DIR = Path(r'D:\86130\faiss_index')  # FAISS 的 C++ fopen 不支持中文路径，放 ASCII 路径（可重建，不进 git）
 
 EMBED_MODEL = r'D:\86130\models\bge-m3'  # 本地 BGE-M3（scripts/download_bge_m3.py 从 ModelScope 下载）
 EMBED_DIM = 1024
