@@ -3,7 +3,7 @@ from pathlib import Path
 
 # 模型缓存走 D 盘 + hf-mirror 镜像（必须在加载任何 HF 模型前设置）
 os.environ.setdefault('HF_ENDPOINT', 'https://hf-mirror.com')
-os.environ.setdefault('HF_HOME', r'D:\hf-models')
+os.environ.setdefault('HF_HOME', r'D:\86130\hf-models')
 
 # 绕过本机 Clash 类代理：注册表 WinINET 代理会干扰 Python 的 SSL 连接，直连国内镜像更稳
 os.environ['NO_PROXY'] = '*'
