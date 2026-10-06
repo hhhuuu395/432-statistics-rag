@@ -17,7 +17,7 @@ DATA_DIR = ROOT / 'data'
 MATERIALS_DIR = ROOT / 'materials'
 INDEX_DIR = DATA_DIR / 'faiss_index'
 
-EMBED_MODEL = 'BAAI/bge-m3'
+EMBED_MODEL = r'D:\86130\models\bge-m3'  # 本地 BGE-M3（scripts/download_bge_m3.py 从 ModelScope 下载）
 EMBED_DIM = 1024
 TOP_K = 8
 LLM_MODEL = 'deepseek-flash'
