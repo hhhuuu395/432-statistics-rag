@@ -1,5 +1,6 @@
-"""从 materials 解析 → 分块 → 嵌入 → 建 FAISS 索引并落盘。"""
+"""从 materials 解析 → 分块 → 嵌入 → 建 FAISS + BM25 索引并落盘。"""
 import json
+import re
 
 from ..utils import config
 from .parse import parse_directory
@@ -9,21 +10,29 @@ from .index import build_index, save_index
 
 
 def _clean_ocr_text(text):
-    """清洗 OCR 出的茆书页文本：去水印、去模型前言、去 markdown 标题符号。"""
+    """清洗 OCR 出的茆书页文本：去水印、去模型前言、去 markdown 标题、去 URL 编码垃圾。"""
     lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
     lines = [ln for ln in lines if not any(w in ln for w in config.WATERMARK_PATTERNS)]
     lines = [ln for ln in lines if not ln.startswith('以下')]
     lines = [ln.lstrip('#').strip() for ln in lines]
+    lines = [ln for ln in lines if len(re.findall(r'%[0-9A-Fa-f]{2}', ln)) < 5]
     return '\n'.join(lines)
+
+
+def _save_all(chunks):
+    """建 FAISS（dense）+ BM25（稀疏）索引。"""
+    from ..rag.bm25 import build_bm25, save_bm25
+    idx, ch = build_index(chunks, load_model())
+    save_index(idx, ch, config.INDEX_DIR)
+    save_bm25(build_bm25(chunks), config.BM25_DIR)
+    return len(chunks)
 
 
 def build_from_materials():
     """仅文本源（无茆书）。"""
     recs = parse_directory(config.MATERIALS_DIR)
     chunks = [c for r in recs for c in chunk_text(r['text'], r['source'], r['page'])]
-    idx, ch = build_index(chunks, load_model())
-    save_index(idx, ch, config.INDEX_DIR)
-    return len(chunks)
+    return _save_all(chunks)
 
 
 def build_with_maoshu():
@@ -35,6 +44,4 @@ def build_with_maoshu():
         if text:
             recs.append({'text': text, 'page': r['page'] - 22, 'source': '茆诗松教材第三版.pdf'})
     chunks = [c for r in recs for c in chunk_text(r['text'], r['source'], r['page'])]
-    idx, ch = build_index(chunks, load_model())
-    save_index(idx, ch, config.INDEX_DIR)
-    return len(chunks)
+    return _save_all(chunks)

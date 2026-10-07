@@ -10,15 +10,17 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from src.utils import config
 from src.ingest.embed import load_model
 from src.ingest.index import load_index
-from src.rag.retrieve import retrieve
+from src.rag.retrieve import hybrid_retrieve
+from src.rag.bm25 import load_bm25
+from src.rag.rerank import load_reranker
 from src.rag.generate import generate
 from src.eval.metrics import judge_answer, judge_relevance
 
 
-def _process_one(r, model, index, chunks, retries=2):
+def _process_one(r, model, index, chunks, bm25, retries=2):
     for attempt in range(retries + 1):
         try:
-            ret = retrieve(r['问题'], model, index, chunks)
+            ret = hybrid_retrieve(r['问题'], model, index, chunks, bm25)
             gen = generate(r['问题'], ret)
             ans = judge_answer(r['问题'], r['答案'], gen)
             rel = judge_relevance(r['问题'], ret)
@@ -48,10 +50,12 @@ def main(limit=None, workers=8):
 
     model = load_model()
     index, chunks = load_index(config.INDEX_DIR)
+    bm25 = load_bm25(config.BM25_DIR)
+    load_reranker()  # 预加载 reranker，避免多线程竞争
 
     rows = []
     with ThreadPoolExecutor(max_workers=workers) as ex:
-        futs = {ex.submit(_process_one, r, model, index, chunks): r for r in es}
+        futs = {ex.submit(_process_one, r, model, index, chunks, bm25): r for r in es}
         done = 0
         for fut in as_completed(futs):
             rows.append(fut.result())
