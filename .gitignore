@@ -14,3 +14,6 @@ venv/
 # raw source materials — 学生PII截图 + 教材PDF版权 + 大体积二进制
 # 清洗/脱敏后的评测数据放单独目录（如 data/）再入库
 materials/
+
+# 茆书 OCR 产物（版权衍生 + 可从 materials 重跑重建）
+data/maoshu_ocr.json
