@@ -44,9 +44,19 @@ DeepSeek 生成 ──> 带 [来源N] 引用的答案
 ### 0. 环境
 
 ```bash
+python -m venv .venv
+.venv/Scripts/activate                       # Windows；macOS / Linux: source .venv/bin/activate
+python -m pip install -U pip                 # 先升级 pip —— 部分国内镜像需要新版 pip 才能解析
 pip install -r requirements.txt
-# requirements.txt 只固定了核心依赖，实际还需：requests python-docx PyMuPDF openpyxl python-pptx numpy
 ```
+
+若默认源慢或不可达，加国内镜像（实测阿里云可解析 `faiss-cpu`，清华源在旧 pip 下会报 `No matching distribution`）：
+
+```bash
+pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
+```
+
+> `requirements.txt` **刻意保持纯 ASCII**：pip 在中文 Windows 上按系统本地编码（GBK）解码 requirements 文件，中文注释会直接抛 `UnicodeDecodeError`。
 
 在项目根目录建 `.env`，写入一行（已 gitignore，不进仓库）：
 

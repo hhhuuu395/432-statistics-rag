@@ -1,3 +1,19 @@
+# NOTE: keep this file ASCII-only. pip decodes requirements files with the
+# system locale (GBK on Chinese Windows) and crashes on non-ASCII characters.
+
+# Vector retrieval core
 faiss-cpu
 sentence-transformers
+numpy
+
+# Generation / vision OCR / LLM judge (DeepSeek API)
+requests
+
+# Document parsing: docx / pdf / xlsx / pptx
+python-docx
+PyMuPDF
+openpyxl
+python-pptx
+
+# Tests
 pytest
