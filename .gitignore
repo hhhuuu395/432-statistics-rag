@@ -17,3 +17,6 @@ materials/
 
 # 茆书 OCR 产物（版权衍生 + 可从 materials 重跑重建）
 data/maoshu_ocr.json
+
+# 评测中间产物（可重跑重建，不入库）
+data/eval_rows_partial.json

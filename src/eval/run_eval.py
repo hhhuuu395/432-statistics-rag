@@ -62,6 +62,9 @@ def main(limit=None, workers=8):
             done += 1
             if done % 20 == 0:
                 print(f'[{done}/{len(es)}] 完成', flush=True)
+                # 增量落盘：任务中途挂掉也不丢已完成的部分
+                json.dump(rows, open(config.DATA_DIR / 'eval_rows_partial.json', 'w', encoding='utf-8'),
+                          ensure_ascii=False, indent=2)
 
     report = {
         '数学基础': _agg([x for x in rows if x['章节'] == '数学基础']),
