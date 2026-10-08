@@ -37,3 +37,12 @@ def judge_relevance(question, chunks, model=None):
     content = _ask(prompt, model)
     m = re.search(r'[123]', content)
     return int(m.group(0)) if m else 0
+
+
+def judge_fabrication(question, chunks, generated, model=None):
+    """判断生成答案是否有「编造」：断言了检索资料里没有的内容、或给出与资料无关的自信结论。"""
+    ctx = '\n'.join(f"[{i + 1}] {c['chunk']['text'][:200]}" for i, c in enumerate(chunks))
+    prompt = (f"判断下面生成答案是否有「编造」：即断言了检索资料里没有的内容、或给出与资料无关的自信结论"
+              f"（而不是基于资料、或明确说明资料不足）。\n"
+              f"问题：{question}\n检索资料：\n{ctx}\n生成答案：{generated}\n只输出：有编造 / 无编造")
+    return '有编造' if '有编造' in _ask(prompt, model) else '无编造'
