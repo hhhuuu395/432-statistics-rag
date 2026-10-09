@@ -1,10 +1,12 @@
 # 432 统计学 AI 答疑助手
 
+> **个人作品集项目**（RAG 全链路 · LLM 评测驱动迭代）。**阅读入口 → [docs/final_report.md](docs/final_report.md)**：一页速览，3 分钟看懂整个项目。
+
 面向中南大学应用统计（432 统计学）考研学生的**知识点答疑助手**：学生提问 → 混合检索教材 / 真题语料 → DeepSeek 生成**带引用来源**的答案。
 
 项目重点不在「把 RAG 搭起来」，而在**用真实答疑记录做评测、由 badcase 数据驱动每一轮改动**。四级迭代把统计专业课答案准确率从 **16.7% 提到 35.7%**，每一步改什么、留不留都由评测数据决定 —— 包括一次「加了复杂组件但评测没涨」的诚实回退判断。
 
-> 完整曲线与归因见 **[docs/final_report.md](docs/final_report.md)**；逐阶段实验记录见 [docs/experiments.md](docs/experiments.md)。
+> 逐阶段实验记录见 [docs/experiments.md](docs/experiments.md)；设计决策与演进见 [docs/design.md](docs/design.md)。
 
 ## 系统架构
 
